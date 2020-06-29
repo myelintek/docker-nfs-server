@@ -42,12 +42,3 @@ docker exec -ti CONTAINER bash
 ## mounting the nfs share from another host
 mount -v -t nfs -o ro,nfsvers=3,nolock,proto=udp,port=2049 <ip_address_docker_host>:/nfs /mnt/scratch
 
-## Todo
-* There seems to be a bug on systems with ipv6 disabled kernels/configs:
-[have a look at the mailing list](http://www.spinics.net/lists/linux-nfs/msg53046.html)
- * should be fixed with nfs-utils-1.3.4
-* eliminate --privileged mode, have a look ...
- * [here](http://linux.die.net/man/7/capabilities)
- * and [here](https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities)
-* Setup automated build
- * [Automated Builds](https://docs.docker.com/docker-hub/builds/)
