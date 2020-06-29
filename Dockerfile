@@ -1,7 +1,5 @@
 FROM alpine:3.7
 
-MAINTAINER Ali Bengali <ali-beng-ali@users.noreply.github.com>
-
 # Install bash & nfs-utils
 RUN apk --update upgrade && \
  apk add bash nfs-utils && \
